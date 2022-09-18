@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  app:
+    image: "mcr.microsoft.com/vscode/devcontainers/javascript-node:16"
+  hapi:
+    ports:
+      - "8080:8080"
+    volumes:
+      - hapi:/data/hapi
+volumes:
+  hapi:
+    external: true
