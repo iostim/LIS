@@ -1,0 +1,4 @@
+version: "3.9"
+services:
+  hapi:
+    image: hapiproject/hapi:v6.0.1

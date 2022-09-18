@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  hapi:
+    ports:
+      - "8090:8080"
+    volumes:
+      - hapi:/data/hapi
+volumes:
+  hapi:
+    external: true
