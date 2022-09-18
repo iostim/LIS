@@ -9,4 +9,3 @@ services:
       - hapi:/data/hapi
 volumes:
   hapi:
-    external: true
