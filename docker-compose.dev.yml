@@ -2,6 +2,8 @@ version: "3.9"
 services:
   app:
     image: "mcr.microsoft.com/vscode/devcontainers/javascript-node:16"
+    volumes:
+      - .:/workspace:cached
   hapi:
     ports:
       - "8080:8080"
