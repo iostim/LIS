@@ -1,0 +1,6 @@
+[submodule "root"]
+	path = root
+	url = git@github.com:iostim/root.git
+[submodule "patients"]
+	path = patients
+	url = git@github.com:iostim/patients.git
