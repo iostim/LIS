@@ -19,5 +19,5 @@ Or generate with [Synthea](https://synthea.mitre.org/) yourself.
 Upload the data to your FHIR server:
 
 ```
-find fhir -type f -print0 | xargs -0 -i curl -X POST -H "Content-Type: application/json" -d @{} -s -o /dev/null -w '%{http_code}\n' http://hapi/fhir
+find fhir -type f -print0 | xargs -0 -i curl -X POST -H "Content-Type: application/json" -d @{} -s -o /dev/null -w '%{http_code}\n' http://nginx:8080/fhir
 ```
