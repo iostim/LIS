@@ -1,13 +1,15 @@
 server:
+  # url prefix for hapi
   port: 8080
   servlet:
     context_path: /hapi
 hapi:
   fhir:
+    # it's a remote URL for Swagger app
     server_address: http://127.0.0.1:8080/fhir
     tester:
       home:
-        name: Test of Tester
+        name: Local Tester
         # it's a URL inside container
         server_address: http://127.0.0.1:8080/hapi/fhir
         refuse_to_fetch_third_party_urls: false
