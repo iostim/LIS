@@ -6,8 +6,7 @@ services:
     volumes:
       - .:/workspace:cached
     environment:
-      - FHIR_TARGET=http://localhost:8080
-      - FHIR_PATH=/fhir
+      - FHIR_PROXY_URL=http://localhost:8080/fhir
       - VUE_APP_FHIR_URL=http://localhost:8080/fhir
   hapi:
     volumes:

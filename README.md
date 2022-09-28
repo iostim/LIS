@@ -8,9 +8,9 @@ Start with `docker-compose up -d`.
 - Application `app` container
 - HAPIFHIR `hapi` container
 - NGINX `nginx` container configured with three urls using environment variables:
-  + /     pointing to `APP_URL`
-  + /fhir pointing to `FHIR_URL`
-  + /hapi pointing to `HAPI_URL`
+  + /     pointing to application (`APP_URL`)
+  + /fhir pointing to FHIR service (`FHIR_URL`)
+  + /hapi pointing to HAPIFHIR service (`HAPI_URL`)
 
 To make it works, HAPI started inside `/hapi` context, adjust it if you change this endpoint in NGINX config.
 Consequently you would need to adjust `HAPI_URL` and `FHIR_URL` since they are based on this context.
@@ -21,7 +21,7 @@ Start the app(s) and adjust `APP_URL` to the root config or the application runn
 
 Vue applications require environment variable `VUE_APP_FHIR_URL` pointing to an `/fhir` endpoint of a FHIR service.
 
-Also, each application is able to proxy `/fhir` requests to a FHIR service defined using `FHIR_TARGET` and `FHIR_PATH`.
+Also, each application is able to proxy `/fhir` requests to a FHIR service defined using environment variable `FHIR_PROXY_URL`.
 Though `VUE_APP_FHIR_URL` still must be defined.
 
 FIXME: Isn't the setup very hard, much complex, so overcomplicated?
